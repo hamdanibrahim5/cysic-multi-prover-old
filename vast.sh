@@ -31,9 +31,9 @@ do
   sleep 5
   bash ~/"setup_prover.sh" "${REWARD_ADDRESSES[$i-1]}"
   mkdir -p $PROVER_DIR/.cysic/assets/scroll/v1/params
-  cp -r /.scroll_prover/params/params20 $PROVER_DIR/.cysic/assets/scroll/v1/params/params20
-  cp -r /.scroll_prover/params/params24 $PROVER_DIR/.cysic/assets/scroll/v1/params/params24
-  cp -r /.scroll_prover/params/params25 $PROVER_DIR/.cysic/assets/scroll/v1/params/params25
+  cp -r /root/.scroll_prover/params/params20 $PROVER_DIR/.cysic/assets/scroll/v1/params/params20
+  cp -r /root/.scroll_prover/params/params24 $PROVER_DIR/.cysic/assets/scroll/v1/params/params24
+  cp -r /root/.scroll_prover/params/params25 $PROVER_DIR/.cysic/assets/scroll/v1/params/params25
   sha256sum "$PROVER_DIR"/*.so "$PROVER_DIR/prover"
   FINAL_DIR="cysic-prover$((COUNT - i + 1))"
   mv "$PROVER_DIR" "$FINAL_DIR"
